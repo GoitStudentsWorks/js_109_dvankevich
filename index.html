@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/js_109_dvankevich/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script type="module" crossorigin src="/js_109_dvankevich/index.js"></script>
+  <link rel="modulepreload" crossorigin href="/js_109_dvankevich/assets/vendor-C6HZcDrf.js">
+  <link rel="stylesheet" crossorigin href="/js_109_dvankevich/assets/vendor-Cvhwh8Pc.css">
+  <link rel="stylesheet" crossorigin href="/js_109_dvankevich/assets/index-DBXu61Kq.css">
+</head>
+
+<body>
+  <header class="header" id="top">
+  <div class="header-section container" id="header">
+    <a class="header-logo" href="/index.html"
+      >Lloyd<span class="header-logo-tech">Jefferson.</span></a
+    >
+
+    <div class="icon-conrainer">
+      <div class="switch_container">
+        <input type="checkbox" id="switch" />
+        <label for="switch" class="label">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+        </label>
+      </div>
+    </div>
+
+    <nav class="header-navigation">
+      <ul class="header-list">
+        <li class="header-item">
+          <a class="header-link" href="#about-me">About me</a>
+        </li>
+        <li class="header-item">
+          <a class="header-link" href="#my-projects">Projects</a>
+        </li>
+        <li class="header-item">
+          <a class="header-link" href="#work-together">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      class="header-btn js-open-menu"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg class="header-btn-icon" width="32" height="32">
+        <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#burger"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+
+<div class="header-mobile-menu-container js-menu-container" id="mobile-menu">
+  <div class="header-mobile-menu">
+    <div class="header-logo-container">
+      <a class="header-mobile-logo" href="#top"
+        >Lloyd<span class="header-mobile-logo-tech">Jefferson.</span></a
+      >
+    </div>
+    <button class="header-mobile-menu-close js-close-menu">
+      <svg width="32" height="32" class="header-mobile-menu-close-icon">
+        <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#x"></use>
+      </svg>
+    </button>
+
+    <nav class="header-mobile-navigation">
+      <ul class="header-mobile-list">
+        <li class="header-mobile-item">
+          <a class="header-mobile-link" href="#about-me">About me</a>
+        </li>
+        <li class="header-mobile-item">
+          <a class="header-mobile-link" href="#my-projects">Projects</a>
+        </li>
+        <li class="header-mobile-item">
+          <a class="header-mobile-link" href="#work-together">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+  <main>
+    <!-- Loads the specified .html file -->
+    <section class="hero-section" id="hero">
+  <div class="container hero-container">
+    <div class="hero-wrapper-top">
+      <h1 class="hero-title">
+        Hello, I am
+        <span class="hero-title-img"
+          ><a href="#"
+            ><img
+              class="hero-image"
+              src="data:image/webp;base64,UklGRnAGAABXRUJQVlA4WAoAAAAQAAAAawAAawAAQUxQSLkAAAABZ2CQbeTYHcHX5D4iIljXewBubG3LomfwAty/iKEGavAOGGLvgCGzAtxTzx3Wv6+r9feZjTei/xOA9/meNkIPLTc+L2ojOfFJ3Qj3fqDepK0s75ZGfBKAepO3sgAzQxgEnhlKUIbS0uBwXDlCjxypF47uK8dIcxzMv///Zs1xeOUYvXB0HzlSe45wgcOlOCx4YigBc4YgoN7krSwAlvKSAKDepK0s71CQ5sXHTVGHOD7P97SUQ8uN9wBWUDggkAUAAPAeAJ0BKmwAbAA+kTyZSCWjIqEvFksQsBIJYgDLnPeH18xy7wL34I7+4G54/zt993gXb6I05ubsM2L4XFe9CZtNaNAmAZosBljJxKJ31YmevJ3TAN2+J97cBgg80Ib0GgPBQ7BedZmJGsTzv78cnARk+Q/Bo32Xddzia9McI1w2vQ8axQdCG8KYAhyOwvee7cwsRSCbMzKL3kuKGeB4XpYl3t6hCVXScXuPkQRrmClqLg59DDPlOaXfOVRAh4//u33C8K3kC+ZLlP+XFvWkPuGMThMKOCWfZMXK/MMrLxGY3TfPBGvIxPuamI0URyTBJWa3wUrfcP09lRb7J4LToLAA/vA8qGdRXCofJSp3EyFlp+rAe44aM6l9H7rLfmPcGXmHVL8a3hnly0axV4qKG1YGbaH8pzqPOBFnNsi289xCi6a+2v7Op0NdH+bOjQlYwQb+7E3X+tSbMjbc/bjxZwXCXqryMy2wUObRoBZCz7P+pfiI92P+W78XyuZc4sr0jDrRzpJPwjoacnRg17aVZ5UrPierMQiUoZqtueRzNSU0shcf/2unb2AVl3iZzeNwq9kwEsLPcpf6UwJzwiGRnOks7VR4t3qtW4JM31HkF9wEMDETEgfTa7+xNM/6VD3zJ1KucVoO5FD2H07ZwcNQocuZtMN3mTgWyNc60jGR3UQr00WAYmxnqnAjb0qwl7KGG6rC2CGckdGU2DBEQBIV2h1+L3cbQNgI8OYTwptYRzYJhv3QOWIqkfK3PoyckvvAHOHsQBppRFAtsbO+20s3AvjqW/ySAMQq7VXQK1DtEAqWc1DN5msc7yxFhDnOWEXqrYWypP6zUIlWNtlS3J+MoeVJ+H4RLCPIqzS6+CceQ06hBP3mx9tehKfkG+eDuyAVLo+BBRpmp9P65akWTLKCUws7/eDEVb0nci8boRHX8kW/IBltsl59yjs8Ntx/KwfIlHinuEmrb7t8lnwoWGD/IoayWdgLI6vh/KZmvZCyHKzlhr0qmquchmawpFesSnM29mlH8Zl0LKBuXIzWvOCS523ng+6Hq8NWmvE2hUyPRHEKDrUIWw4DltiNlO90xW9KNjdjQ5kf5vmtcATXueFyDt4C6TShioOKp3wsPmyVmN8kJzR49mK9qmGUPZSEGoegzOS8VZHoi0erscsY8rPcS2AYTA81Kl8ceix37baL5t/YClzRng+DQNjwERp72duET0pUt87P10txUSHOKQj/ewiMKx1k/58oritF8y3or27LFM/cE2nV5graV48CL/AQe5fKPx/gUkH0IvvhgeKqdJpzpu4LN1yqas3gpImZ2MbSWij12BIVgzcCX5yV/Z44LZdv1M3bh4ophwHqCPghqz0yLUe3Yto0Jtg+oCb+PWGuZfBogA+qXubjKTgoXT35pPrFtWz+jeq9SztX0Ech+Y3erGi5Nzz/SIBuDWtEFxKa7IjzOiDn2kOHACO20RIG9JObMu7AnWgvDIBrZi+Sauk8ykdYXaCJW49u5D7Fjod1NMMUWTu++Q9kmRcOr5gczS7wBjkN5CbiQOZVWTXmcsGr1BPTosx+4YSKBf7FgZAhH+zXwV42WBveB/Qh3aITw+I6SXat+L7p4xVGOkYSr9SciVg5P3Hx59VyGSBuXlQg+SFHEhbsmqqe5nm/fEUewRSCLqq7zZyLdR05saSJP+XsRLUNi/V0s/qVLuCHuL9Ogpw5oRiUqqLbpKoLf7JU0KGRgLHBD4cvnprKZr+gyPqz9EhtdEsNcakNDqeLkuo5/9eRM2D15ftgJSKLinzyGG+dbu0ba8AKx1xTA7pTmHMMJyIq/tfTflWqOkvnYRfuUWB78AmQcC5uz9LUQb61GxzzH/1+s4cJCYqqhRVkxm3FpNBzoX/7EftWIB5byAAA"
+              alt="developer"
+              srcset="data:image/webp;base64,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 1x, data:image/webp;base64,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 2x" /></a></span
+        ><span class="hero-title-span">Fullstack developer</span>
+      </h1>
+    </div>
+    <div class="hero-wrapper-down">
+      <a href="#work-together" class="wrapper-order element-animation-right">
+        <svg width="30" height="16" class="hero-arrow">
+          <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#order-arrow" />
+        </svg>
+        <p class="hero-order-text">Order the project</p>
+      </a>
+      <div class="hero-descr-wrapper element-animation-left">
+        <p class="hero-descr">
+          I work with people all over the world to create
+          <span class="hero-descr-span">impressive</span> and
+          <span class="hero-descr-span">functional websites</span> that reflect
+          each client’s unique personality.
+        </p>
+      </div>
+    </div>
+    <div class="hero-wrapper-container-list">
+      <ul class="hero-list">
+        <li class="hero-list-item">
+          <a
+            class="hero-link"
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </li>
+        <li class="hero-list-item">
+          <a
+            class="hero-link"
+            href="https://www.facebook.com/goITclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Facebook</a
+          >
+        </li>
+        <li class="hero-list-item">
+          <a
+            class="hero-link"
+            href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Linkedin</a
+          >
+        </li>
+        <li class="hero-list-item">
+          <a
+            class="hero-link"
+            href="https://github.com/dvankevich/project-brainstorm-02"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="about-me-section section" id="about-me">
+  <div class="container">
+    <h2 class="aboutme-title element-animation-right">About <span>me</span></h2>
+    <div class="img-bio-container">
+      <picture class="aboutme-img-container">
+        <source
+          srcset="/js_109_dvankevich/assets/aboutme-desc-CQJAUhii.webp 1x, /js_109_dvankevich/assets/aboutme-desc2x-9QdQB49x.webp 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/js_109_dvankevich/assets/aboutme-tab-BnjKPyDQ.webp 1x, /js_109_dvankevich/assets/aboutme-tab2x-CpuAuWSj.webp 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="/js_109_dvankevich/assets/aboutme-mob-Duix4l0u.webp 1x, /js_109_dvankevich/assets/aboutme-mob2x-BGAhgpQL.webp 2x"
+          media="(max-width: 767px)"
+        />
+        <img
+          class="aboutme-img"
+          src="/js_109_dvankevich/assets/img-desc-D0fIfXRZ.png"
+          alt="Smiling man"
+        />
+      </picture>
+
+      <div class="aboutme-bio-container">
+        <h3 class="aboutme-bio-title">BIO</h3>
+        <p class="aboutme-bio-text">
+          I'm Lloyd Jefferson, a talented programmer specializing in software
+          development. My expertise spans various programming languages and
+          technologies, and I am dedicated to continually enhancing my skills. I
+          thrive on seeking unconventional and creative solutions to problems,
+          leveraging a high level of analytical skills to effectively tackle
+          even the most challenging tasks.
+        </p>
+        <p class="aboutme-bio-text">
+          Adaptable to both independent and team-oriented work, I collaborate
+          seamlessly with colleagues, exchanging ideas and finding optimal
+          solutions. My professional maturity enables me to navigate challenges
+          and stressful situations with a calm demeanor, maintaining a
+          consistently high quality of work. Committed to self-improvement, I
+          actively engage in studying new technologies and practices to stay
+          current with the latest innovations in the field.
+        </p>
+      </div>
+    </div>
+
+    <div class="edc-role-container">
+      <div>
+        <h3 class="edc-role-title">EDUCATION</h3>
+        <ul class="edc-role-list">
+          <li class="edc-role-item">
+            2018 - 2019 &#8260; Frontend Development Diploma, GoIT IT School,
+            New York
+          </li>
+          <li class="edc-role-item">
+            2019 - 2020 &#8260; Advanced Web Development Certificate, GoIT IT
+            School, New York
+          </li>
+          <li class="edc-role-item">
+            2020 - 2022 &#8260; Advanced Blender Animation Techniques, Udemy
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="edc-role-title">ROLE</h3>
+        <ul class="edc-role-list">
+          <li class="edc-role-item">Frontend development</li>
+          <li class="edc-role-item">HeadlessCMS, Wordpress</li>
+          <li class="edc-role-item">Blender (enjoy)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="tech-skills-section section" id="tech-skills">
+  <h2 class="visually-hidden">tech-skills</h2>
+
+  <!-- First line -->
+  <div class="container-tech">
+    <div class="marquee">
+      <div class="marquee__inner">
+        <p class="marquee__line">
+          <span class="marquee__square__2"></span> JAVASCRIPT
+          <span class="marquee__square__2"></span> REACT
+          <span class="marquee__square__2"></span> NODE.JS
+          <span class="marquee__square__2"></span> REACT NATIVE
+          <span class="marquee__square__2"></span> HTML/CSS
+          <span class="marquee__square__2"></span> JAVASCRIPT
+          <span class="marquee__square__2"></span> REACT
+          <span class="marquee__square__2"></span> NODE.JS
+          <span class="marquee__square__2"></span> REACT NATIVE
+          <span class="marquee__square__2"></span> HTML/CSS
+          <span class="marquee__square__2"></span> JAVASCRIPT
+          <span class="marquee__square__2"></span> REACT
+          <span class="marquee__square__2"></span> NODE.JS
+          <span class="marquee__square__2"></span> REACT NATIVE
+          <span class="marquee__square__2"></span> HTML/CSS
+          <span class="marquee__square__2"></span> JAVASCRIPT
+          <span class="marquee__square__2"></span> REACT
+          <span class="marquee__square__2"></span> NODE.JS
+          <span class="marquee__square__2"></span> REACT NATIVE
+          <span class="marquee__square__2"></span> HTML/CSS
+          <span class="marquee__square__2"></span> JAVASCRIPT
+          <span class="marquee__square__2"></span> REACT
+          <span class="marquee__square__2"></span> NODE.JS
+          <span class="marquee__square__2"></span> REACT NATIVE
+          <span class="marquee__square__2"></span> HTML/CSS
+          <span class="marquee__square__2"></span> JAVASCRIPT
+          <span class="marquee__square__2"></span> REACT
+          <span class="marquee__square__2"></span> NODE.JS
+          <span class="marquee__square__2"></span> REACT NATIVE
+          <span class="marquee__square__2"></span> HTML/CSS
+          <span class="marquee__square__2"></span> JAVASCRIPT
+          <span class="marquee__square__2"></span> REACT
+          <span class="marquee__square__2"></span> NODE.JS
+          <span class="marquee__square__2"></span> REACT NATIVE
+          <span class="marquee__square__2"></span> HTML/CSS
+          <span class="marquee__square__2"></span> JAVASCRIPT
+          <span class="marquee__square__2"></span> REACT
+          <span class="marquee__square__2"></span> NODE.JS
+          <span class="marquee__square__2"></span> REACT NATIVE
+          <span class="marquee__square__2"></span> HTML/CSS
+          <span class="marquee__square__2"></span> JAVASCRIPT
+        </p>
+      </div>
+    </div>
+
+    <!-- Second line -->
+    <div class="m_rotate">
+      <div class="marquee_class">
+        <div class="marquee__inner__2">
+          <p class="marquee__line_2">
+            <span class="marquee__square"></span> HTML/CSS
+            <span class="marquee__square"></span> JAVASCRIPT
+            <span class="marquee__square"></span> REACT
+            <span class="marquee__square"></span> NODE.JS
+            <span class="marquee__square"></span> REACT NATIVE
+            <span class="marquee__square"></span> HTML/CSS
+            <span class="marquee__square"></span> JAVASCRIPT
+            <span class="marquee__square"></span> REACT
+            <span class="marquee__square"></span> NODE.JS
+            <span class="marquee__square"></span> REACT NATIVE
+            <span class="marquee__square"></span> HTML/CSS
+            <span class="marquee__square"></span> JAVASCRIPT
+            <span class="marquee__square"></span> REACT
+            <span class="marquee__square"></span> NODE.JS
+            <span class="marquee__square"></span> REACT NATIVE
+            <span class="marquee__square"></span> HTML/CSS
+            <span class="marquee__square"></span> JAVASCRIPT
+            <span class="marquee__square"></span> REACT
+            <span class="marquee__square"></span> NODE.JS
+            <span class="marquee__square"></span> REACT NATIVE
+            <span class="marquee__square"></span> HTML/CSS
+            <span class="marquee__square"></span> JAVASCRIPT
+            <span class="marquee__square"></span> REACT
+            <span class="marquee__square"></span> NODE.JS
+            <span class="marquee__square"></span> REACT NATIVE
+            <span class="marquee__square"></span> HTML/CSS
+            <span class="marquee__square"></span> JAVASCRIPT
+            <span class="marquee__square"></span> REACT
+            <span class="marquee__square"></span> NODE.JS
+            <span class="marquee__square"></span> REACT NATIVE
+            <span class="marquee__square"></span> HTML/CSS
+            <span class="marquee__square"></span> JAVASCRIPT
+            <span class="marquee__square"></span> REACT
+            <span class="marquee__square"></span> NODE.JS
+            <span class="marquee__square"></span> REACT NATIVE
+            <span class="marquee__square"></span> HTML/CSS
+            <span class="marquee__square"></span> JAVASCRIPT
+            <span class="marquee__square"></span> REACT
+            <span class="marquee__square"></span> NODE.JS
+            <span class="marquee__square"></span> REACT NATIVE
+            <span class="marquee__square"></span> HTML/CSS
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section mp-section" id="my-projects">
+  <div class="container">
+    <h2 class="mp-header element-animation-left">
+      my <span class="mp-span">projects</span>
+    </h2>
+    <ul class="mp-list">
+      <li class="mp-list-item element-animation-right">
+        <img
+          class="mp-image"
+          srcset="/js_109_dvankevich/assets/project-9-DlLDvVI6.webp 1x, /js_109_dvankevich/assets/project-9@2x-B5fTm4Z2.webp 2x"
+          src="/js_109_dvankevich/assets/project-9-min-D9RG8bm1.png"
+          loading="lazy"
+          alt="site project image"
+        />
+        <p class="mp-skills">React, JavaScript, Node JS, Git</p>
+        <div class="mp-card-wrapper">
+          <h3 class="mp-name">Wallet webservice</h3>
+          <div class="mp-visit-wrapper">
+            <a
+              class="mp-visit-link"
+              href="https://dvankevich.github.io/project-brainstorm-02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VISIT
+              <svg class="mp-visit-icon">
+                <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="mp-list-item element-animation-left">
+        <img
+          class="mp-image"
+          srcset="/js_109_dvankevich/assets/project-7-DpDG9Fs2.webp 1x, /js_109_dvankevich/assets/project-7@2x-BFDcz_Kq.webp 2x"
+          src="/js_109_dvankevich/assets/project-7-min-D9mFSC7i.png"
+          loading="lazy"
+          alt="site project image"
+        />
+        <p class="mp-skills">React, JavaScript, Node JS, Git</p>
+        <div class="mp-card-wrapper">
+          <h3 class="mp-name">Green harvest webservice</h3>
+          <div class="mp-visit-wrapper">
+            <a
+              class="mp-visit-link"
+              href="https://dvankevich.github.io/project-brainstorm-02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VISIT
+              <svg class="mp-visit-icon">
+                <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="mp-list-item element-animation-right">
+        <img
+          class="mp-image"
+          srcset="/js_109_dvankevich/assets/project-10-DjODUlgp.webp 1x, /js_109_dvankevich/assets/project-10@2x-BiRkE3LA.webp 2x"
+          src="/js_109_dvankevich/assets/project-10-min-ry0h1sIH.png"
+          loading="lazy"
+          alt="site project image"
+        />
+        <p class="mp-skills">React, JavaScript, Node JS, Git</p>
+        <div class="mp-card-wrapper">
+          <h3 class="mp-name">English Exellence webservice</h3>
+          <div class="mp-visit-wrapper">
+            <a
+              class="mp-visit-link"
+              href="https://dvankevich.github.io/project-brainstorm-02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VISIT
+              <svg class="mp-visit-icon">
+                <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="mp-list-item visually-hidden">
+        <img
+          class="mp-image"
+          srcset="/js_109_dvankevich/assets/project-1-CiLJ8H7H.webp 1x, /js_109_dvankevich/assets/project-1@2x-DJMUxFij.webp 2x"
+          src="/js_109_dvankevich/assets/project-1-min-1YvXIEVM.png"
+          loading="lazy"
+          alt="site project image"
+        />
+        <p class="mp-skills">React, JavaScript, Node JS, Git</p>
+        <div class="mp-card-wrapper">
+          <h3 class="mp-name">online business webservice</h3>
+          <div class="mp-visit-wrapper">
+            <a
+              class="mp-visit-link"
+              href="https://dvankevich.github.io/project-brainstorm-02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VISIT
+              <svg class="mp-visit-icon">
+                <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="mp-list-item visually-hidden">
+        <img
+          class="mp-image"
+          srcset="/js_109_dvankevich/assets/project-2-CMsRPhYM.webp 1x, /js_109_dvankevich/assets/project-2@2x-Bin47ujw.webp 2x"
+          src="/js_109_dvankevich/assets/project-2-min-BYLaqlIv.png"
+          loading="lazy"
+          alt="site project image"
+        />
+        <p class="mp-skills">React, JavaScript, Node JS, Git</p>
+        <div class="mp-card-wrapper">
+          <h3 class="mp-name">health webservice</h3>
+          <div class="mp-visit-wrapper">
+            <a
+              class="mp-visit-link"
+              href="https://dvankevich.github.io/project-brainstorm-02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VISIT
+              <svg class="mp-visit-icon">
+                <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="mp-list-item visually-hidden">
+        <img
+          class="mp-image"
+          srcset="/js_109_dvankevich/assets/project-3-ASVKBxUn.webp 1x, /js_109_dvankevich/assets/project-3@2x-BDltZNP5.webp 2x"
+          src="/js_109_dvankevich/assets/project-3-min-Rhle4Akj.png"
+          loading="lazy"
+          alt="site project image"
+        />
+        <p class="mp-skills">React, JavaScript, Node JS, Git</p>
+        <div class="mp-card-wrapper">
+          <h3 class="mp-name">organic product webservice</h3>
+          <div class="mp-visit-wrapper">
+            <a
+              class="mp-visit-link"
+              href="https://dvankevich.github.io/project-brainstorm-02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VISIT
+              <svg class="mp-visit-icon">
+                <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="mp-list-item visually-hidden">
+        <img
+          class="mp-image"
+          srcset="/js_109_dvankevich/assets/project-4-DPSDksG4.webp 1x, /js_109_dvankevich/assets/project-4@2x-C38kqp7d.webp 2x"
+          src="/js_109_dvankevich/assets/project-4-min-46nx1LKI.png"
+          loading="lazy"
+          alt="site project image"
+        />
+        <p class="mp-skills">React, JavaScript, Node JS, Git</p>
+        <div class="mp-card-wrapper">
+          <h3 class="mp-name">cosmetic shop webservice</h3>
+          <div class="mp-visit-wrapper">
+            <a
+              class="mp-visit-link"
+              href="https://dvankevich.github.io/project-brainstorm-02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VISIT
+              <svg class="mp-visit-icon">
+                <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="mp-list-item visually-hidden">
+        <img
+          class="mp-image"
+          srcset="/js_109_dvankevich/assets/project-5-NC2ACk4A.webp 1x, /js_109_dvankevich/assets/project-5@2x-B2BdojAQ.webp 2x"
+          src="/js_109_dvankevich/assets/project-5-min-RknpG1mH.png"
+          loading="lazy"
+          alt="site project image"
+        />
+        <p class="mp-skills">React, JavaScript, Node JS, Git</p>
+        <div class="mp-card-wrapper">
+          <h3 class="mp-name">mimino restaraunt</h3>
+          <div class="mp-visit-wrapper">
+            <a
+              class="mp-visit-link"
+              href="https://dvankevich.github.io/project-brainstorm-02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VISIT
+              <svg class="mp-visit-icon">
+                <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="mp-list-item visually-hidden">
+        <img
+          class="mp-image"
+          srcset="/js_109_dvankevich/assets/project-6-DT5Ucwbm.webp 1x, /js_109_dvankevich/assets/project-6@2x-Brpl7VsV.webp 2x"
+          src="/js_109_dvankevich/assets/project-6-min-sGXMdv6K.png"
+          loading="lazy"
+          alt="site project image"
+        />
+        <p class="mp-skills">React, JavaScript, Node JS, Git</p>
+        <div class="mp-card-wrapper">
+          <h3 class="mp-name">online clothing store</h3>
+          <div class="mp-visit-wrapper">
+            <a
+              class="mp-visit-link"
+              href="https://dvankevich.github.io/project-brainstorm-02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VISIT
+              <svg class="mp-visit-icon">
+                <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="mp-list-item visually-hidden">
+        <img
+          class="mp-image"
+          srcset="/js_109_dvankevich/assets/project-8-B_Mx5L-c.webp 1x, /js_109_dvankevich/assets/project-8@2x-C35GDWO5.webp 2x"
+          src="/js_109_dvankevich/assets/project-8-min-CLpA7MwL.png"
+          loading="lazy"
+          alt="site project image"
+        />
+        <p class="mp-skills">React, JavaScript, Node JS, Git</p>
+        <div class="mp-card-wrapper">
+          <h3 class="mp-name">organic food webstore</h3>
+          <div class="mp-visit-wrapper">
+            <a
+              class="mp-visit-link"
+              href="https://dvankevich.github.io/project-brainstorm-02/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VISIT
+              <svg class="mp-visit-icon">
+                <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#visit-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="mp-button-wrapper">
+      <button type="button" class="mp-load-more-button">Load More</button>
+    </div>
+  </div>
+</section>
+
+    <section class="section benefits-section" id="benefits">
+  <div class="container benefits-container">
+    <h2 class="benefits-title element-animation-right">
+      <span class="benefits-title-color">Benefits</span> of working with me
+    </h2>
+    <ul class="benefits-list">
+      <li class="benefits-list-item">
+        <svg class="benefits-icon">
+          <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#user"></use>
+        </svg>
+        <h3 class="benefits-list-item-title">Expertise</h3>
+        <p class="benefits-list-item-text">
+          With extensive experience in development, I have a deep understanding
+          of programming and website development.
+        </p>
+      </li>
+      <li class="benefits-list-item">
+        <svg class="benefits-icon">
+          <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#chat"></use>
+        </svg>
+        <h3 class="benefits-list-item-title">Communication</h3>
+        <p class="benefits-list-item-text">
+          Understanding your needs and wants is my priority and I am always
+          available for discussions and open to corrections.
+        </p>
+      </li>
+      <li class="benefits-list-item">
+        <svg class="benefits-icon">
+          <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#brush" class="icon-list-benefits"></use>
+        </svg>
+        <h3 class="benefits-list-item-title">Art</h3>
+        <p class="benefits-list-item-text">
+          Thanks to my creative nature, I am ready to accept challenges and help
+          you bring your ideas to life.
+        </p>
+      </li>
+      <li class="benefits-list-item">
+        <svg class="benefits-icon">
+          <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#hourglass"></use>
+        </svg>
+        <h3 class="benefits-list-item-title">Urgent execution</h3>
+        <p class="benefits-list-item-text">
+          I understand how important time is to you. Ready to work quickly and
+          efficiently, without reducing the quality of work.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="section" id="faq">
+  <div class="faq-section container">
+    <h2 class="faq-title element-animation-right">
+      frequently asked <span>question</span>
+    </h2>
+    <ul class="faq-list accordion-container element-animation-left">
+      <li class="faq-list-item ac">
+        <div class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span class="faq-list-item-title"
+              >What programming languages ​​are most often used in your
+              project?</span
+            >
+            <svg class="faq-icon-down">
+              <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#icon-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="faq-list-item-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="faq-list-item ac">
+        <div class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span class="faq-list-item-title"
+              >What are the deadlines for the project?</span
+            >
+            <svg class="faq-icon-down">
+              <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#icon-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="faq-list-item-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+      <li class="faq-list-item ac">
+        <div class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span class="faq-list-item-title"
+              >What payment methods do you accept?</span
+            >
+            <svg class="faq-icon-down">
+              <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#icon-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="faq-list-item-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+      <li class="faq-list-item ac">
+        <div class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span class="faq-list-item-title">How can I contact you?</span>
+            <svg class="faq-icon-down">
+              <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#icon-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="faq-list-item-text">
+            In the field of web development, there are various technologies and
+            programming languages. Typically, this includes a combination of
+            frontend (client side) and backend (server side) languages.
+          </p>
+        </div>
+      </li>
+      <li class="faq-list-item ac">
+        <div class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span class="faq-list-item-title"
+              >Do you provide advice or support?</span
+            >
+            <svg class="faq-icon-down">
+              <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#icon-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="faq-list-item-text">
+            The terms of project implementation depend to a large extent on a
+            number of factors, such as the scope of the project, its complexity,
+            and the availability of resources. Determining exact deadlines is a
+            difficult task, and it usually occurs during the planning phase of
+            the project.
+          </p>
+        </div>
+      </li>
+      <li class="faq-list-item ac">
+        <div class="ac-header">
+          <button type="button" class="ac-trigger">
+            <span class="faq-list-item-title"
+              >What does the process of developing a software product look like
+              from idea to implementation?</span
+            >
+            <svg class="faq-icon-down">
+              <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#icon-down"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="ac-panel">
+          <p class="faq-list-item-text">
+            Payment through credit and debit cards such as Visa, MasterCard,
+            specialized electronic payment systems such as PayPal, as well as
+            payments in cryptocurrencies such as Bitcoin, Ethereum and others.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<object
+  type="image/svg+xml"
+  data="/img/sprite.svg"
+  style="display: none"
+></object>
+
+    <section class="section" id="reviews">
+  <div class="container">
+    <h2 class="reviews-title element-animation">reviews</h2>
+
+    <div class="swiper">
+      <ul class="reviews-wrapper swiper-wrapper js-reviews-wrapper"></ul>
+
+      <div class="reviews-arrows">
+        <button class="reviews-arrow-box-left">
+          <svg width="24" height="24" class="reviews-arrow-left">
+            <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#arrow-left" />
+          </svg>
+        </button>
+        <button class="reviews-arrow-box-right">
+          <svg width="24" height="24" class="reviews-arrow-right">
+            <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#arrow-left" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="work-together section" id="work-together">
+  <div class="work-together-container container">
+    <div class="work-together-left">
+      <h2 class="title-work-together element-animation-right">
+        LET'S
+        <span class="tech-work-together">WORK TOGETHER</span>
+      </h2>
+      <div class="decor"></div>
+
+      <p class="text-work-together">
+        Contact me to transform your ideas into exceptional solutions.
+      </p>
+
+      <ul class="list-work-together">
+        <li class="item-work-together">
+          <svg class="icon-contacts" width="24" height="24">
+            <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#phone"></use>
+          </svg>
+          <a class="link-work-together" href="tel:+380904567890"
+            >+38 090 456 78 90</a
+          >
+        </li>
+
+        <li class="item-work-together">
+          <svg class="icon-contacts" width="24" height="24">
+            <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#mail"></use>
+          </svg>
+          <a class="link-work-together" href="mailto:lloydjefferson@gmail.com"
+            >lloydjefferson@gmail.com</a
+          >
+        </li>
+
+        <li class="item-work-together">
+          <svg class="icon-contacts" width="24" height="24">
+            <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#point"></use>
+          </svg>
+          <a
+            class="link-work-together"
+            href="https://maps.google.com/?q=USA,+New+York"
+            target="_blank"
+            >USA, New York</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="work-together-right">
+      <form id="form" class="contact-form">
+        <input
+          class="contact-input"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your email*"
+          required
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          autocomplete="on"
+        />
+        <label for="email" class="visually-hidden"></label>
+        <p class="error-email" id="email-error">Invalid email, try again</p>
+
+        <svg class="icon-ok" width="14" height="14">
+          <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#ok"></use>
+        </svg>
+        <textarea
+          class="contact-text"
+          id="message"
+          name="message"
+          placeholder="Message"
+          required
+          autocomplete="on"
+        ></textarea
+        ><label for="message" class="visually-hidden"></label>
+        <p class="error-message" id="message-error">
+          Invalid message, try again
+        </p>
+        <button class="send-btn element-animation" type="submit">
+          SEND MESSAGE
+        </button>
+      </form>
+    </div>
+    <div id="modal" class="modal-window">
+      <div class="modal-content">
+        <button class="modal-close-btn" type="button">
+          <svg class="modal-close-icon" width="32" height="32">
+            <use href="/js_109_dvankevich/assets/sprite-TXOec6OY.svg#x"></use>
+          </svg>
+        </button>
+        <h2 class="modal-title">Thank you for your interest in cooperation!</h2>
+        <p class="modal-text">
+          The manager will contact you shortly to discuss further details and
+          opportunities for cooperation. Please stay in touch.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="footer-section" id="footer">
+  <div class="footer-line"></div>
+  <div class="container footer-cont">
+    <div class="footer-wrapper">
+      <a href="#top" class="footer-logo"
+        >Lloyd<span class="footer-logo-span">Jefferson.</span></a
+      >
+      <ul class="footer-list">
+        <li class="footer-list-item">
+          <a
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-links"
+            >Instagram</a
+          >
+        </li>
+        <li class="footer-list-item">
+          <a
+            href="https://www.facebook.com/goITclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-links"
+            >Facebook</a
+          >
+        </li>
+        <li class="footer-list-item">
+          <a
+            href="https://www.linkedin.com/school/goit-start-your-career-in-it"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-links"
+            >Linkedin</a
+          >
+        </li>
+        <li class="footer-list-item">
+          <a
+            href="https://github.com/dvankevich/project-brainstorm-02"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-links"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+    </div>
+    <p class="footer-adress">&#169; Copyright 2024. Made by LloydJefferson</p>
+  </div>
+</footer>
+
+
+
+</body>
+
+</html>
