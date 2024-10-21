@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/project-brainstorm-02/",
+    "build": "vite build --base=/js_109_dvankevich/",
     "preview": "vite preview"
   },
   "devDependencies": {
